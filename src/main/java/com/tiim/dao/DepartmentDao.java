@@ -190,7 +190,7 @@ public class DepartmentDao {
 			con = datasource.getConnection();
 			if(searchDepartment != null && !"".equals(searchDepartment))
 			{
-			    pstmt = con.prepareStatement("Select departmentid, departmentcode,departmentname,description isactive from mst_department Where departmentid like '%"+searchDepartment+"%' order by departmentid");
+			    pstmt = con.prepareStatement("Select departmentid, departmentcode,departmentname,description, isactive from mst_department Where departmentname like '%"+searchDepartment+"%' order by departmentid");
 			}
 			else
 			{
